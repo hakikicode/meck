@@ -3,39 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meck - Medical Blockchain Platform</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Meck - Secure Medical Blockchain</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header>
-        <h1>Meck: Secure Medical Record Management on Blockchain</h1>
-        <p>Your medical data, safely managed and accessible only to you and your trusted doctors.</p>
+    <header class="hero-section">
+        <div class="hero-text">
+            <h1>Meck: Your Health, Securely Managed on Blockchain</h1>
+            <p>Manage and access your medical records securely with blockchain technology and AI-powered insights.</p>
+            <button onclick="scrollToSection('ai-section')">Ask Our AI</button>
+            <button onclick="window.location.href='signup.html'">Get Started</button>
+        </div>
+        <div class="hero-image">
+            <img src="./health-hero.svg" alt="Health management illustration">
+        </div>
     </header>
 
-    <section class="about">
-        <h2>What is Meck?</h2>
-        <p>Meck is a decentralized platform that leverages blockchain technology to securely store and manage medical records. With Meck, patients can ensure that only authorized doctors have access to their medical history, keeping sensitive health information safe from unauthorized access.</p>
-        <p>We also integrate AI to analyze your health data and flag potential health issues, helping doctors make informed decisions while safeguarding patient privacy.</p>
-    </section>
-
     <section class="features">
-        <h2>Key Features</h2>
-        <ul>
-            <li>Blockchain-based record storage for immutability and security.</li>
-            <li>AI-powered analysis of health data to flag anomalies.</li>
-            <li>Role-based access: Only verified doctors can add or modify records.</li>
-            <li>Patients maintain control of who can view their medical data.</li>
-        </ul>
+        <h2>Key Features of Meck</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <img src="./blockchain.png" alt="Blockchain icon">
+                <h3>Blockchain Security</h3>
+                <p>Medical records are securely stored on a blockchain, ensuring they are tamper-proof and accessible only to authorized personnel.</p>
+            </div>
+            <div class="feature-item">
+                <img src="./ai.png" alt="AI insights icon">
+                <h3>AI-Driven Insights</h3>
+                <p>Our AI analyzes your health records to identify potential issues and provide actionable insights for better health management.</p>
+            </div>
+            <div class="feature-item">
+                <img src="./privacy.png" alt="Privacy icon">
+                <h3>Privacy & Control</h3>
+                <p>Only you and your trusted doctors can view or modify your medical records. Sensitive information is kept private.</p>
+            </div>
+        </div>
     </section>
 
-    <section class="cta">
-        <h2>Get Started with Meck</h2>
-        <button onclick="window.location.href='login.html'">Login</button>
-        <button onclick="window.location.href='signup.html'">Sign Up</button>
+    <section id="ai-section" class="ai-section">
+        <h2>Ask Our AI About Your Health</h2>
+        <div class="ai-container">
+            <div class="chatbox" id="chatbox">
+                <div id="chat-history"></div>
+                <input type="text" id="ai-input" placeholder="Ask a health-related question...">
+                <button id="ai-send">Send</button>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Meck. All Rights Reserved.</p>
+        <p>&copy; 2024 Meck. All rights reserved.</p>
     </footer>
+
+    <script src="./ai-chat.js"></script>
 </body>
 </html>
